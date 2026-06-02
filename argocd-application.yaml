@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: invoicing-api
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/CHANGE_ME/adquira-demo.git
+    targetRevision: HEAD
+    path: invoicing_deploy
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: invoicing
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
