@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/CHANGE_ME/adquira-demo.git
+    repoURL: https://github.com/aitcher-fjmedrano/invoicing_deploy.git
     targetRevision: HEAD
-    path: invoicing_deploy
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: invoicing
