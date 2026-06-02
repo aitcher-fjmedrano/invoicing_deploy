@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: acradqdemoxbly.azurecr.io/invoicing-api:0.1.2
+          image: acradqdemoxbly.azurecr.io/invoicing-api:0.1.1
           ports:
             - name: http
               containerPort: 8080
