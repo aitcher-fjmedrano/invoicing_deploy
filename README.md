@@ -31,3 +31,9 @@ make argocd-apply
 ```bash
 make status
 ```
+
+## Autoscaling
+
+Incluye un `HorizontalPodAutoscaler` con `minReplicas: 1` y `maxReplicas: 1`.
+
+Kubernetes HPA con métricas de CPU no permite `minReplicas: 0`. Para scale-to-zero real de pods habría que añadir KEDA/Knative o un scaler basado en eventos.

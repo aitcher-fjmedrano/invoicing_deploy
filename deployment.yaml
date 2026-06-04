@@ -16,9 +16,11 @@ spec:
         app.kubernetes.io/name: invoicing-api
         app.kubernetes.io/part-of: invoicing
     spec:
+      nodeSelector:
+        adquira.io/node-pool: apps
       containers:
         - name: api
-          image: acradqdemoxbly.azurecr.io/invoicing-api:0.1.1
+          image: acradqdemo45cr.azurecr.io/invoicing-api:0.1.0
           ports:
             - name: http
               containerPort: 8080
