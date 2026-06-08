@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: invoicing-api
     app.kubernetes.io/part-of: invoicing
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: invoicing-api
